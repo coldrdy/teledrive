@@ -10,6 +10,9 @@
     "build": "rimraf dist && eslint -c .eslintrc.js --ext .ts . && tsc",
     "postbuild": "test -f keys || (node -e \"console.log(require('crypto').randomBytes(48).toString('base64'));\" > keys && node -e \"console.log(require('crypto').randomBytes(48).toString('base64'));\" >> keys)"
   },
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "@prisma/client": "^3.14.0",
     "@types/moment": "^2.13.0",
